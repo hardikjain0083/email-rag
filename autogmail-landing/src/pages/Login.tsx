@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Bot, Mail, ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import api from '@/lib/api';
+import { redirectToGoogleAuth } from '@/lib/api';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
@@ -11,8 +11,7 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       setLoading(true);
-      const res = await api.get('/auth/login');
-      window.location.href = res.data.url;
+      redirectToGoogleAuth();
     } catch (e) {
       console.error(e);
       setLoading(false);

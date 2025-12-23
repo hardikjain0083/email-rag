@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Bot, Shield, Zap, Mail, ArrowRight, Sparkles, FileText, Clock, Users, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import api from '@/lib/api';
+import { redirectToGoogleAuth } from '@/lib/api';
 import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {
@@ -10,8 +10,7 @@ const LandingPage = () => {
 
   const handleLogin = async () => {
     try {
-      const res = await api.get('/auth/login');
-      window.location.href = res.data.url;
+      redirectToGoogleAuth();
     } catch (e) {
       console.error(e);
       // For demo, navigate to login page

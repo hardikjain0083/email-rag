@@ -47,7 +47,7 @@ def create_flow():
     return flow
 
 @router.get("/login")
-def login():
+def login(redirect: bool = False):
     if not settings:
         raise HTTPException(status_code=500, detail="Configuration not loaded")
     
@@ -57,6 +57,9 @@ def login():
         include_granted_scopes='true'
     )
     # Store state in session if we had one, for now stateless redirection
+    if redirect:
+        # Allow direct navigation so the frontend can simply link to this route
+        return RedirectResponse(url=authorization_url)
     return {"url": authorization_url}
 
 @router.get("/callback")
