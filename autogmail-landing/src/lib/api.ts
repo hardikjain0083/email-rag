@@ -1,11 +1,10 @@
 import axios from 'axios';
 
 // Compute a sane default so deployments work without VITE_API_URL
+// Default to the deployed backend if no env is provided.
 const apiBase =
   (import.meta.env.VITE_API_URL as string | undefined)?.replace(/\/$/, '') ||
-  (typeof window !== 'undefined'
-    ? `${window.location.origin}/api/v1`
-    : 'https://email-rag-gilt.vercel.app/api/v1');
+  'https://hardikjain0083-email-rag.hf.space/api/v1';
 
 const api = axios.create({
   baseURL: apiBase,
