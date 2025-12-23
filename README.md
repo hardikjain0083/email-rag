@@ -82,7 +82,7 @@ autogmail-frontend/
    GROQ_API_KEY=your-groq-api-key
    GOOGLE_CLIENT_ID=your-google-client-id
    GOOGLE_CLIENT_SECRET=your-google-client-secret
-   GOOGLE_REDIRECT_URI=http://localhost:8000/api/v1/auth/callback
+   GOOGLE_REDIRECT_URI=https://hardikjain0083-email-rag.hf.space/api/v1/auth/callback
    DATABASE_URL=sqlite:///./autogmail.db
    ```
 
@@ -91,7 +91,7 @@ autogmail-frontend/
    - Get a Groq API key from [Groq Console](https://console.groq.com/)
    - Create a Google OAuth 2.0 application at [Google Cloud Console](https://console.cloud.google.com/)
      - Enable Gmail API
-     - Add `http://localhost:8000/api/v1/auth/callback` as an authorized redirect URI
+   - Add `https://hardikjain0083-email-rag.hf.space/api/v1/auth/callback` as an authorized redirect URI
 
 ### 2. Frontend Setup
 
@@ -132,8 +132,8 @@ autogmail-frontend/
    uvicorn main:app --reload --host 0.0.0.0 --port 8000
    ```
 
-   The backend will be available at: `http://localhost:8000`
-   API documentation: `http://localhost:8000/docs`
+   The backend will be available at: `https://hardikjain0083-email-rag.hf.space`
+   API documentation: `https://hardikjain0083-email-rag.hf.space/docs`
 
 ### Start the Frontend
 
@@ -147,11 +147,11 @@ autogmail-frontend/
    npm run dev
    ```
 
-   The frontend will be available at: `http://localhost:8080`
+   The frontend will be available at: `https://hardikjain0083-email-rag.hf.space`
 
 ## Application Flow
 
-1. **Landing Page** (`http://localhost:8080/`)
+1. **Landing Page** (`https://hardikjain0083-email-rag.hf.space/`)
    - Click "Get Started" to initiate Google OAuth login
 
 2. **Authentication**
@@ -159,7 +159,7 @@ autogmail-frontend/
    - After authentication, redirects back to `/auth/callback`
    - Token is stored in localStorage
 
-3. **Dashboard** (`http://localhost:8080/dashboard`)
+3. **Dashboard** (`https://hardikjain0083-email-rag.hf.space/dashboard`)
    - View inbox emails
    - Generate AI-powered replies
    - Upload policy documents
@@ -181,12 +181,12 @@ The backend exposes the following main endpoints:
 
 ### Backend Configuration
 - Backend runs on port **8000**
-- CORS is configured to allow requests from `http://localhost:8080`
+- CORS is configured to allow requests from `https://hardikjain0083-email-rag.hf.space`
 - Database: SQLite (stored as `autogmail.db` in backend directory)
 
 ### Frontend Configuration
 - Frontend runs on port **8080**
-- API base URL: `http://localhost:8000/api/v1`
+- API base URL: `https://hardikjain0083-email-rag.hf.space/api/v1`
 - Configured in `autogmail-landing/src/lib/api.ts`
 
 ## Troubleshooting
@@ -229,7 +229,7 @@ The backend exposes the following main endpoints:
 
 4. **Google OAuth errors:**
    - Verify `.env` file has correct Google credentials
-   - Ensure redirect URI matches exactly: `http://localhost:8000/api/v1/auth/callback`
+   - Ensure redirect URI matches exactly: `https://hardikjain0083-email-rag.hf.space/api/v1/auth/callback`
    - Check that Gmail API is enabled in Google Cloud Console
 
 ### Frontend Issues

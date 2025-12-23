@@ -15,9 +15,7 @@ if cors_origins_env:
     origins = [origin.strip() for origin in cors_origins_env.split(",")]
 else:
     origins = [
-        "http://localhost:3000",
-        "http://localhost:5173", # Vite default
-        "http://localhost:8080", # Frontend port
+        "https://hardikjain0083-email-rag.hf.space",
     ]
 
 app.add_middleware(

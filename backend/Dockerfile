@@ -32,9 +32,9 @@ RUN mkdir -p /app/chroma_db
 # Expose port (Cloud Run uses PORT env var, default to 8080)
 EXPOSE 8080
 
-# Health check
+# Health check (uses container port)
 HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
-    CMD python -c "import requests; requests.get('http://localhost:8080/')" || exit 1
+    CMD python -c "import os, requests; port=os.getenv('PORT','8080'); requests.get(f'http://127.0.0.1:{port}/')" || exit 1
 
 # Run the application
 # Cloud Run sets PORT environment variable

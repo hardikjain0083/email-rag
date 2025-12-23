@@ -67,7 +67,7 @@ gcloud auth configure-docker
 3. **Update CORS in `main.py`** to allow your frontend domain:
    ```python
    origins = [
-       "http://localhost:8080",
+       "https://hardikjain0083-email-rag.hf.space",
        "https://your-frontend-domain.com",  # Add your frontend URL
    ]
    ```

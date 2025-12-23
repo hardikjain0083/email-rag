@@ -42,9 +42,7 @@ This guide will help you deploy:
 4. **Update CORS in `main.py`** to allow your Vercel domain:
    ```python
    origins = [
-       "http://localhost:3000",
-       "http://localhost:5173",
-       "http://localhost:8080",
+       "https://hardikjain0083-email-rag.hf.space",
        "https://your-app.vercel.app",  # Add your Vercel URL
    ]
    ```
