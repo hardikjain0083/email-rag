@@ -15,7 +15,7 @@ if cors_origins_env:
     origins = [origin.strip() for origin in cors_origins_env.split(",")]
 else:
     origins = [
-        "https://hardikjain0083-email-rag.hf.space",
+        "https://email-rag-gilt.vercel.app",
     ]
 
 app.add_middleware(

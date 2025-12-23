@@ -12,8 +12,8 @@ class Settings(BaseSettings):
     # Google Auth
     GOOGLE_CLIENT_ID: str
     GOOGLE_CLIENT_SECRET: str
-    GOOGLE_REDIRECT_URI: str = "https://hardikjain0083-email-rag.hf.space/api/v1/auth/callback"
-    FRONTEND_URL: str = "https://hardikjain0083-email-rag.hf.space"  # Frontend URL for OAuth callback
+    GOOGLE_REDIRECT_URI: str = "https://email-rag-gilt.vercel.app/api/v1/auth/callback"
+    FRONTEND_URL: str = "https://email-rag-gilt.vercel.app"  # Frontend URL for OAuth callback
     
     # Database
     DATABASE_URL: str = "sqlite:///./autogmail.db"
