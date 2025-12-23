@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+venv/
+.venv
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment
+.env
+.env.*
+*.env
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+autogmail.db
+chroma_db/
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+*.md
+!README.md
+
+# Test files
+test_*.py
+*_test.py
+tests/
+
+# Development files
+*.bat
+*.sh
+!run.sh
+
