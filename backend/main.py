@@ -16,6 +16,7 @@ if cors_origins_env:
 else:
     origins = [
         "https://email-rag-gilt.vercel.app",
+        "https://hardikjain0083-email-rag.hf.space",
     ]
 
 app.add_middleware(
